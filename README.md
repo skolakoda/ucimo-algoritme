@@ -1,0 +1,2 @@
+# ucimo-algoritme
+Učimo algoritme
