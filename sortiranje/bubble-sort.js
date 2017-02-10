@@ -1,23 +1,20 @@
-// console.count() broji koliko je puta pomocna funkcija pozvana
+const zameni = (niz, i, j) => [niz[i], niz[j]] = [niz[j], niz[i]]
 
-let swap = function(arr, i, j) {
-    console.count( 'swap' );
-    [ arr[i], arr[j] ] = [ arr[j], arr[i] ];
-}
-
-let bubbleSort = function( arr ) {
-    let hasSwapped = false;
+const bubbleSort = niz => {
+  let zamenio = false
     do {
-        hasSwapped = false;
-        for ( let i = 0; i < arr.length - 1; ++i ) {
-            if ( arr[i] > arr[i+1] ) {
-                swap( arr, i, i+1 );
-                hasSwapped = true;
-            }
-        }
-    } while ( hasSwapped );
+    zamenio = false
+    for (let i = 0; i < niz.length - 1; ++i) {
+      if (niz[i] > niz[i + 1]) {
+        zameni(niz, i, i + 1)
+        zamenio = true
+      }
+    }
+  } while (zamenio)
 }
 
-let arr = [ 5, 4, 3, 2, 1];
+const niz = [5, 4, 3, 2, 1]
 
-bubbleSort( arr )
+console.log(niz)
+bubbleSort(niz)
+console.log(niz)
