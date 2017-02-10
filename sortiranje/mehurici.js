@@ -1,4 +1,4 @@
-const niz  = [4, 54, 3, 2, 6, 6, 345, 5]
+const niz = [4, 54, 3, 2, 6, 6, 345, 5]
 console.log(niz)
 let promenjeno = false
 
