@@ -1,6 +1,6 @@
 # Učimo algoritme
 
-## Konstantni: O(1)
+## Konstantna složenost: O(1)
 
 An O(1) algorithm takes approximately the same amount of time regardless of the number of inputs. A good example of this is fetching a single random element from an array. The size of the array doesn't matter because we can access any element of the array as fast as any other element.
 
@@ -11,7 +11,7 @@ const randomElement = array => {
 ```
 
 
-## Logaritamski: O(log n)
+## Logaritamska složenost: O(log n)
 
 For an algorithm to have logarithmic efficiency, written O(log n), it must, for each element acted on, eliminate some fraction of the remaining inputs. For example acting on an element in the middle of an array must remove all elements left of the current element from future consideration. It is not enough to simply perform less work. The amount less work must be some consistent fraction.
 
@@ -21,7 +21,7 @@ A good way to think about this is: if the algorithm is given an array, then init
 Najpoznatiji primer logaritamskog algoritma je binarna pretraga.
 
 
-## Linearni: O(n)
+## Linearna složenost: O(n)
 
 A linear function is one of the form f(x) = ax + b. In programming a linear algorithm is one that takes time to run within some constant multiple of the number of inputs it is given. 
 
@@ -34,7 +34,7 @@ for(let i = 0; i < n; i++) {
 An algorithm being in O(n) does not necessarily mean that it performs the same work on each element, only that the amount of work that it performs on each of those elements does not depend on the total number of elements. 
 
 
-## Kvadratni: O(n^2)
+## Kvadratna složenost: O(n^2)
 
 Kvadratni algoritmi su oni u kojima količina rada po elementu zavisi od ukupnog broja elemenata. This is called O(n^2) because each of the n inputs has O(n) work performed on it. 
 
@@ -53,7 +53,7 @@ for(let i = 0; i < n; i++){
 ```
 
 
-## Eksponencijalni: O(x^n)
+## Eksponencijalna složenost: O(x^n)
 
 Eksponencijalne funkcije su one kod kojih svako uvećenje unosa za jedan uvećava vreme izvršenja za neki multiplikator x. Efikasnost tih algoritama je O(x^n), na primer: O(2^n).
 
