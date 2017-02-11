@@ -1,7 +1,7 @@
 # Učimo algoritme
 
 ## Konstantna složenost: O(1)
-> vreme nezavisno od unosa
+> vreme uvek isto, nezavisno od unosa
 
 Konstantni algoritmi uzimaju otprilike isto vremena bez obzira na unos. 
 
