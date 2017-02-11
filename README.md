@@ -27,7 +27,7 @@ Najpoznatiji primer logaritamskog algoritma je binarna pretraga.
 
 
 ## Linearna složenost: O(n)
-> vreme raste isto kao unos
+> *vreme raste isto kao unos*
 
 Linearna funkcija je ona koja ima formu f(x) = ax + b. U programiranju, linearni algoritam ima vreme izvrsenja u okviru nekog konstantnog kolicnika broja unosa. 
 
@@ -41,7 +41,7 @@ An algorithm being in O(n) does not necessarily mean that it performs the same w
 
 
 ## Kvadratna složenost: O(n^2)
-> vreme raste unos na kvadrat
+> *vreme raste unos na kvadrat*
 
 Kvadratni algoritmi su oni u kojima količina rada po elementu zavisi od ukupnog broja elemenata. This is called O(n^2) because each of the n inputs has O(n) work performed on it. 
 
