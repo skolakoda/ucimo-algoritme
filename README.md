@@ -3,7 +3,7 @@
 Algoritam je procedura za obavljanje nekog zadatka. Složenost algoritma je broj koraka potrebnih da se zadatak obavi.
 
 ## Konstantna složenost: O(1)
-> vreme uvek isto, nezavisno od unosa
+> *vreme uvek isto, nezavisno od unosa*
 
 Konstantni algoritmi uzimaju otprilike isto vremena bez obzira na unos. 
 
@@ -17,7 +17,7 @@ const randomElement = array => {
 
 
 ## Logaritamska složenost: O(log n)
-> vreme raste sporije od unosa
+> *vreme raste sporije od unosa*
 
 For an algorithm to have logarithmic efficiency, written O(log n), it must, for each element acted on, eliminate some fraction of the remaining inputs. For example acting on an element in the middle of an array must remove all elements left of the current element from future consideration. It is not enough to simply perform less work. The amount less work must be some consistent fraction.
 
