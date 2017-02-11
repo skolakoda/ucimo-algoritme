@@ -1,5 +1,7 @@
 # Učimo algoritme
 
+Algoritam je procedura za obavljanje nekog zadatka. Složenost algoritma je broj koraka potrebnih da se zadatak obavi.
+
 ## Konstantna složenost: O(1)
 > vreme uvek isto, nezavisno od unosa
 
