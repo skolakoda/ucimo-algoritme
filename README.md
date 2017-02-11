@@ -1,6 +1,6 @@
 # Učimo algoritme
 
-Algoritam je procedura za obavljanje nekog zadatka. Složenost algoritma se meri u broju koraka potrebnih da se zadatak obavi. Broj koraka je direktno proporcionalan vremenu.
+Algoritam je procedura za obavljanje nekog zadatka. Složenost algoritma se meri u broju koraka potrebnih da se zadatak obavi. Broj koraka je direktno proporcionalan trajanju algoritma.
 
 ## Konstantna složenost: O(1)
 > *vreme uvek isto, nezavisno od unosa*
