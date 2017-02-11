@@ -2,7 +2,9 @@
 
 ## Konstantna složenost: O(1)
 
-An O(1) algorithm takes approximately the same amount of time regardless of the number of inputs. A good example of this is fetching a single random element from an array. The size of the array doesn't matter because we can access any element of the array as fast as any other element.
+Konstantni algoritmi traju otprilike isto vremena bez obzira na unos. 
+
+A good example of this is fetching a single random element from an array. The size of the array doesn't matter because we can access any element of the array as fast as any other element.
 
 ```js
 const randomElement = array => {
