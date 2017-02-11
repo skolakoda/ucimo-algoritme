@@ -25,7 +25,7 @@ Najpoznatiji primer logaritamskog algoritma je binarna pretraga.
 
 ## Linearna složenost: O(n)
 
-A linear function is one of the form f(x) = ax + b. In programming a linear algorithm is one that takes time to run within some constant multiple of the number of inputs it is given. 
+Linearna funkcija je ona koja ima formu f(x) = ax + b. U programiranju, linearni algoritam ima vreme izvrsenja u okviru nekog konstantnog kolicnika broja unosa. 
 
 ```js
 for(let i = 0; i < n; i++) {
