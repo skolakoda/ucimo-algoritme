@@ -6,8 +6,8 @@ const poredjajUmetanjem = niz => {
     for (let i = 0; i < pocniOd; i++) {
       const nesvrstan = niz[pocniOd]
       if (nesvrstan < niz[i]) {
-        niz.splice(pocniOd, 1)
-        niz.splice(i, 0, nesvrstan)
+        niz.splice(pocniOd, 1)  // vadi nesvrstanog
+        niz.splice(i, 0, nesvrstan) // umece nesvrstanog
       }
     }
     pocniOd ++
