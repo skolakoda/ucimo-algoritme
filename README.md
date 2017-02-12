@@ -3,7 +3,7 @@
 Algoritam je procedura za obavljanje nekog zadatka. Složenost algoritma se meri u broju koraka potrebnih da se zadatak obavi. Broj koraka je direktno proporcionalan trajanju algoritma.
 
 ## Konstantna složenost: O(1)
-> *vreme uvek isto, nezavisno od unosa*
+> ***vreme uvek isto, nezavisno od unosa***
 
 Konstantni algoritmi uzimaju otprilike isto vremena bez obzira na unos. 
 
