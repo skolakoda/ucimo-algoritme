@@ -11,51 +11,50 @@ Računarska nauka pokušava da utvrdi koliko je neki algoritam složen, odnosno 
 ## Konstantna složenost: O(1)
 > ***vreme uvek isto, nezavisno od unosa***
 
-Konstantni algoritmi uzimaju otprilike isto vremena bez obzira na unos.
-
-A good example of this is fetching a single random element from an array. The size of the array doesn't matter because we can access any element of the array as fast as any other element.
+Konstantni algoritmi traju približno isto vremena bez obzira na unos. Dobar primer je izbor nasumičnog elementa niza. Dužina niza ne utiče, jer svakom elementu pristupamo jednako brzo.
 
 ```js
-const randomElement = array => {
-	array[Math.floor(Math.random() * array.length)]
-}
+const randomElement = array => array[Math.floor(Math.random() * array.length)]
 ```
-
 
 ## Logaritamska složenost: O(log n)
 > ***vreme raste sporije od unosa***
 
-For an algorithm to have logarithmic efficiency, written O(log n), it must, for each element acted on, eliminate some fraction of the remaining inputs. For example acting on an element in the middle of an array must remove all elements left of the current element from future consideration. It is not enough to simply perform less work. The amount less work must be some consistent fraction.
-
-A good way to think about this is: if the algorithm is given an array, then initially every element in the array is under consideration. We then look at the center of the array and eliminate all the elements left of the center from consideration.
+Algoritam ima logaritamsku efikasnost ako za svaku radnju nad elementom eliminiše procenat unosa. Na primer, rad nad srednjem elementu uklanja iz razmatranja sve elemente levo.
 
 Najpoznatiji primer logaritamskog algoritma je binarna pretraga.
-
 
 ## Linearna složenost: O(n)
 > ***vreme raste isto kao unos***
 
-Linearna funkcija je ona koja ima formu f(x) = ax + b. U programiranju, linearni algoritam ima vreme izvrsenja u okviru nekog konstantnog kolicnika broja unosa.
+Linearna funkcija ima formu `f(x) = ax + b`. U programiranju, vreme izvršenja linearnog algoritma jednako je nekom količniku (može i 1) broja unosa. Primer:
 
 ```js
-for(let i = 0; i < n; i++) {
-    console.log(array[i])
+let sum = 0
+for (let i = 0; i < n; i++) {
+    sum += i
 }
 ```
 
-An algorithm being in O(n) does not necessarily mean that it performs the same work on each element, only that the amount of work that it performs on each of those elements does not depend on the total number of elements.
-
+Količina rada po elementu može biti različita, ali ne zavisi od količine unosa.
 
 ## Kvadratna složenost: O(n^2)
 > ***vreme raste unos na kvadrat***
 
-Kvadratni algoritmi su oni u kojima količina rada po elementu zavisi od ukupnog broja elemenata. This is called O(n^2) because each of the n inputs has O(n) work performed on it.
+Kod kvadratnih algoritama količina rada po elementu zavisi od ukupnog broja elemenata. Svaki od n unosa zahteva n količinu rada.Klasičan primer je petlja unutar petlje:
 
-As long as we can craft some O(n) (linear) function that describes the work done on each of the n inputs to an algorithm, that algorithm will be quadratic.
-
-Primer, kombinacija elemenata svakog sa svakim:
 ```js
-const osobe = ["Alice", "Bob", "Carol", "Dave", "Ed"];
+for(i = 0; i < n; i++){
+  for(j = 0; j < n; j++){
+    sum += 1;
+  }
+}
+```
+
+Jedna od primena je kombinacija svakog elementa sa svakim:
+
+```js
+const osobe = ["Kurta", "Murta", "Djoka", "Mika", "Pera"];
 const n = osobe.length;
 
 for(let i = 0; i < n; i++){
@@ -65,10 +64,20 @@ for(let i = 0; i < n; i++){
 }
 ```
 
+Ako imamo 3 petlje jednu unutar druge, onda imamo `O(n^3)` odnosno kubnu složenost.
 
 ## Eksponencijalna složenost: O(x^n)
 > ***vreme raste na stepen unosa***
 
-Eksponencijalne funkcije su one kod kojih svako uvećenje unosa za jedan uvećava vreme izvršenja za neki multiplikator x. Efikasnost tih algoritama je O(x^n), na primer: O(2^n).
+Kod eksponencijalnih funkcija uvećenje unosa za jedan uvećava vreme izvršenja za jedan stepen. Na primer, za jedan unos imamo 10 operacija, za dva unosa 10 * 10, za tri unosa 10 * 10 * 10.
 
-Recursive fibonacci algorithm is an example of an exponential algorithm, because increasing the number of the desired fibonacci number essentially doubled the amount of work to be done.
+Rekurzivni fibonačijev algoritam je primer eksponencijalne funkcije:
+
+```js
+const fibonaci = function(n) {
+  if (n < 3) return 1
+  return nadjiFibonaci(n - 1) + nadjiFibonaci(n - 2)
+}
+```
+
+Takođe, pokušaj nalaženja lozinke putem svim mogućih kombinacija.
