@@ -1,13 +1,6 @@
-const slucajniNiz = duzina => {
-  const niz = []
-  for (let i = 0; i < duzina; i++) {
-    const broj = Math.round(Math.random() * duzina)
-    niz.push(broj)
-  }
-  return niz
-}
+const slucajniNiz = require('../utils/slucajniNiz')
 
-const poredjajMehuricima = niz => {
+const poredjajMehurima = niz => {
   while (true) {
     let imaNeporedjanih = false
     for (let i = niz.length-1; i >= 0; i--) {
@@ -26,6 +19,6 @@ const niz = slucajniNiz(30)
 
 console.log('izvorni niz: ')
 console.log(niz.join(' '))
-const poredjanNiz = poredjajMehuricima(niz)
+const poredjanNiz = poredjajMehurima(niz)
 console.log('poredjan niz: ')
 console.log(poredjanNiz.join(' '))
