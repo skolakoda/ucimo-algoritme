@@ -1,29 +1,20 @@
-const zameniMesta = (niz, i, j) => [niz[i], niz[j]] = [niz[j], niz[i]]
+const slucajniNiz = require('../utils/slucajniNiz')
 
-const indeksNajmanjeg = function(niz, startIndex) {
-  let min = niz[startIndex]
-  let index = startIndex
-  for (let i = startIndex + 1; i < niz.length; i++) {
-    if (niz[i] < min) {
-      index = i
-      min = niz[i]
+const poredjajIzborom = ulazniNiz => {
+  const niz = [...ulazniNiz]
+  let pocetniIndex = 0
+  let najmanjiIndex = 0
+  while (pocetniIndex < niz.length) {
+    for (let i = pocetniIndex; i < niz.length; i++) {
+      if (niz[i] < niz[najmanjiIndex]) najmanjiIndex = i
     }
+    [niz[pocetniIndex], niz[najmanjiIndex]] = [niz[najmanjiIndex], niz[pocetniIndex]]
+    pocetniIndex++
   }
-  return index
+  return niz
 }
 
-const poredjajBiranjem = function(niz) {
-  let temp
-  for (let i = 0; i < niz.length; i++) {
-    temp = indeksNajmanjeg(niz, i)
-    zameniMesta(niz, i, temp)
-  }
-}
-
-const niz = [22, 11, 99, 88, 9, 7, 42]
-poredjajBiranjem(niz)
-console.log('Array after sorting: ' + niz)
-
-const niz2 = [101, 22, 11, 99, 88, 9, 7, 42]
-poredjajBiranjem(niz2)
-console.log('Array after sorting: ' + niz2)
+const niz = slucajniNiz(20)
+console.log(niz)
+const poredjanNiz = poredjajIzborom(niz)
+console.log(poredjanNiz)
