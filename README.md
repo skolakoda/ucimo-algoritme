@@ -1,6 +1,6 @@
 # Učimo algoritme
 
-Algoritam je procedura za obavljanje nekog zadatka. Složenost algoritma se meri u broju koraka potrebnih da se zadatak obavi. Broj koraka je direktno proporcionalan trajanju algoritma. Efikasnost je obrnuto proporcionalna broju koraka.
+Algoritam je procedura za obavljanje nekog zadatka. Složenost algoritma se meri u broju koraka potrebnih da se zadatak obavi. Broj koraka je direktno proporcionalan trajanju algoritma. Efikasnost je obrnuto proporcionalna složenosti.
 
 Algoritme koristimo od malih nogu. Svi smo kao mali skupljali sličice. Da bismo ih poređali, verovatno smo imali neku svoju proceduru za sortiranje, odnosno algoritam.
 
