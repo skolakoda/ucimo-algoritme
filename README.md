@@ -2,9 +2,9 @@
 
 Algoritam je procedura za obavljanje nekog zadatka. Složenost algoritma se meri u broju koraka potrebnih da se zadatak obavi. Broj koraka je direktno proporcionalan trajanju algoritma. Efikasnost je obrnuto proporcionalna broju koraka.
 
-Algoritme svi koristimo od malih nogu. Svi smo kao mali skupljali sličice. Da bismo ih poređali imali smo neku svoju proceduru za sortiranje, odnosno algoritam.
+Algoritme koristimo od malih nogu. Svi smo kao mali skupljali sličice. Da bismo ih poređali, verovatno smo imali neku svoju proceduru za sortiranje, odnosno algoritam.
 
-Računarska nauka pokušava da utvrdi koliko je algoritam efikasan.
+Računarska nauka pokušava da utvrdi koliko je algoritam složen, odnosno učinkovit.
 
 ## Konstantna složenost: O(1)
 > ***vreme uvek isto, nezavisno od unosa***
