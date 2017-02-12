@@ -6,7 +6,7 @@ Algoritam je procedura za obavljanje nekog zadatka. Složenost algoritma se meri
 
 Algoritme svi koristimo od malih nogu. Na primer, kao mali smo skupljali sličice. Da bismo ih poređali po brojevima, verovatno smo imali neku svoju proceduru za ređanje, odnosno algoritam.
 
-Računarska nauka pokušava da utvrdi koliko je algoritam složen, odnosno učinkovit.
+Računarska nauka pokušava da utvrdi koliko je neki algoritam složen, odnosno učinkovit.
 
 ## Konstantna složenost: O(1)
 > ***vreme uvek isto, nezavisno od unosa***
