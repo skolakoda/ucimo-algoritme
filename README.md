@@ -62,6 +62,7 @@ for(let i = 0; i < n; i++){
 
 ## Eksponencijalna složenost: O(x^n)
 > ***vreme raste na stepen unosa***
+
 Eksponencijalne funkcije su one kod kojih svako uvećenje unosa za jedan uvećava vreme izvršenja za neki multiplikator x. Efikasnost tih algoritama je O(x^n), na primer: O(2^n).
 
 Recursive fibonacci algorithm is an example of an exponential algorithm, because increasing the number of the desired fibonacci number essentially doubled the amount of work to be done.
