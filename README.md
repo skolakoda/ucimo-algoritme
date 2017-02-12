@@ -17,7 +17,7 @@ const randomElement = array => {
 
 
 ## Logaritamska složenost: O(log n)
-> *vreme raste sporije od unosa*
+> ***vreme raste sporije od unosa***
 
 For an algorithm to have logarithmic efficiency, written O(log n), it must, for each element acted on, eliminate some fraction of the remaining inputs. For example acting on an element in the middle of an array must remove all elements left of the current element from future consideration. It is not enough to simply perform less work. The amount less work must be some consistent fraction.
 
@@ -27,7 +27,7 @@ Najpoznatiji primer logaritamskog algoritma je binarna pretraga.
 
 
 ## Linearna složenost: O(n)
-> *vreme raste isto kao unos*
+> ***vreme raste isto kao unos***
 
 Linearna funkcija je ona koja ima formu f(x) = ax + b. U programiranju, linearni algoritam ima vreme izvrsenja u okviru nekog konstantnog kolicnika broja unosa. 
 
@@ -41,7 +41,7 @@ An algorithm being in O(n) does not necessarily mean that it performs the same w
 
 
 ## Kvadratna složenost: O(n^2)
-> *vreme raste unos na kvadrat*
+> ***vreme raste unos na kvadrat***
 
 Kvadratni algoritmi su oni u kojima količina rada po elementu zavisi od ukupnog broja elemenata. This is called O(n^2) because each of the n inputs has O(n) work performed on it. 
 
