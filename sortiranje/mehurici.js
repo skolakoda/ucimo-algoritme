@@ -1,6 +1,7 @@
 const slucajniNiz = require('../utils/slucajniNiz')
 
-const poredjajMehurima = niz => {
+const poredjajMehuricima = izvorniNiz => {
+  const niz = [...izvorniNiz]
   while (true) {
     let imaNeporedjanih = false
     for (let i = niz.length-1; i >= 0; i--) {
@@ -15,10 +16,8 @@ const poredjajMehurima = niz => {
   return niz
 }
 
-const niz = slucajniNiz(30)
+const niz = slucajniNiz(20)
+console.log(niz)
 
-console.log('izvorni niz: ')
-console.log(niz.join(' '))
-const poredjanNiz = poredjajMehurima(niz)
-console.log('poredjan niz: ')
-console.log(poredjanNiz.join(' '))
+const poredjanNiz = poredjajMehuricima(niz)
+console.log(poredjanNiz)
