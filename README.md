@@ -24,6 +24,8 @@ Algoritam ima logaritamsku efikasnost ako za svaku radnju nad elementom eliminiÅ
 
 Najpoznatiji primer logaritamskog algoritma je binarna pretraga.
 
+By the way, log n in Computer Science is always considered to be log_2 n by default, because we really like binary stuff.
+
 ## Linearna sloÅ¾enost: O(n)
 > ***vreme raste isto kao unos***
 
