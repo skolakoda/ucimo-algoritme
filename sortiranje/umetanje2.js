@@ -5,11 +5,9 @@ const poredjajUmetanjem = izvorniNiz => {
   let pocniOd = 1
   while (pocniOd < niz.length) {
     let j = pocniOd
-    let i = j - 1
-    while(niz[j] < niz[i]) {
-      [niz[i], niz[j]] = [niz[j], niz[i]]
+    while(niz[j] < niz[j - 1]) {
+      [niz[j - 1], niz[j]] = [niz[j], niz[j - 1]]
       j--
-      i--
     }
     pocniOd++
   }
