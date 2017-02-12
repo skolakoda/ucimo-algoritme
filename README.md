@@ -1,3 +1,5 @@
+![](slicice.jpg)
+
 # Učimo algoritme
 
 Algoritam je procedura za obavljanje nekog zadatka. Složenost algoritma se meri u broju koraka potrebnih da se zadatak obavi. Broj koraka je direktno proporcionalan trajanju algoritma. Efikasnost je obrnuto proporcionalna složenosti.
