@@ -73,7 +73,7 @@ Ako imamo 3 petlje jednu unutar druge, onda imamo `O(n^3)` odnosno kubnu složen
 
 Kod eksponencijalnih funkcija uvećenje unosa za jedan uvećava vreme izvršenja za jedan stepen. Na primer, za jedan unos imamo 10 operacija, za dva unosa 10 * 10, za tri unosa 10 * 10 * 10.
 
-Rekurzivni fibonačijev algoritam je primer eksponencijalne funkcije:
+Primer eksponencijalne funkcije je naivna rekurzija za fibonačijev algoritam:
 
 ```js
 const fibonaci = function(n) {
