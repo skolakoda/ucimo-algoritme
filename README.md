@@ -1,4 +1,4 @@
-![](slicice.jpg)
+![](https://cdn-images-1.medium.com/max/960/1*_8PfaIyJC7dWJOsKxz47ow.png)
 
 # Učimo algoritme
 
