@@ -9,7 +9,6 @@
   "rules": {
       "semi": ["warn", "never"],
       "quotes": ["error", "single"],
-      "no-undef": "error",
       "no-unused-vars": "error",
       "no-redeclare": "error",
       "no-use-before-define": "error",
