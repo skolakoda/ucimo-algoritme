@@ -1,14 +1,14 @@
 # https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 
-def find_primes(n):
-  primes = []
-  composites = set()
+def nadji_proste_brojeve(n):
+  prosti = set()
+  slozeni = set()
 
   for i in range (2, n+1):
-    if i not in composites:
-      primes.append(i)
+    if i not in slozeni:
+      prosti.add(i)
       for j in range(i*i, n+1, i):
-        composites.add(j)
-  return primes
+        slozeni.add(j)
+  return prosti
 
-print(find_primes(100))
+print(nadji_proste_brojeve(100))
