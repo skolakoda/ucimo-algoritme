@@ -1,8 +1,8 @@
 def pomnozi(x, y):
-    proizvod = 0
+    zbir = 0
     while x > 0:
-        proizvod += y
+        zbir += y
         x -=1
-    return proizvod
+    return zbir
 
 print (pomnozi(8, 5))
