@@ -1,19 +1,18 @@
 # http://interactivepython.org/runestone/static/pythonds/Recursion/ExploringaMaze.html#lst-mazesearch
-
 import turtle
 
-PART_OF_PATH = 'O'
-TRIED = '.'
+VISITED = '.'
 OBSTACLE = '+'
 DEAD_END = '-'
+FINAL_PATH = 'O'
 
 class Maze:
-    def __init__(self,mazeFileName):
+
+    def __init__(self, mazeFile):
         rowsInMaze = 0
         columnsInMaze = 0
         self.mazelist = []
-        mazeFile = open(mazeFileName,'r')
-        rowsInMaze = 0
+        mazeFile = open(mazeFile, 'r')
         for line in mazeFile:
             rowList = []
             col = 0
@@ -74,11 +73,11 @@ class Maze:
             self.mazelist[row][col] = val
         self.moveTurtle(col,row)
 
-        if val == PART_OF_PATH:
+        if val == FINAL_PATH:
             color = 'green'
         elif val == OBSTACLE:
             color = 'red'
-        elif val == TRIED:
+        elif val == VISITED:
             color = 'black'
         elif val == DEAD_END:
             color = 'red'
@@ -106,13 +105,13 @@ def searchFrom(maze, startRow, startColumn):
     if maze[startRow][startColumn] == OBSTACLE :
         return False
     #  2. We have found a square that has already been explored
-    if maze[startRow][startColumn] == TRIED or maze[startRow][startColumn] == DEAD_END:
+    if maze[startRow][startColumn] == VISITED or maze[startRow][startColumn] == DEAD_END:
         return False
     # 3. We have found an outside edge not occupied by an obstacle
     if maze.isExit(startRow,startColumn):
-        maze.updatePosition(startRow, startColumn, PART_OF_PATH)
+        maze.updatePosition(startRow, startColumn, FINAL_PATH)
         return True
-    maze.updatePosition(startRow, startColumn, TRIED)
+    maze.updatePosition(startRow, startColumn, VISITED)
     # Otherwise, use logical short circuiting to try each direction
     # in turn (if needed)
     found = searchFrom(maze, startRow-1, startColumn) or \
@@ -120,7 +119,7 @@ def searchFrom(maze, startRow, startColumn):
             searchFrom(maze, startRow, startColumn-1) or \
             searchFrom(maze, startRow, startColumn+1)
     if found:
-        maze.updatePosition(startRow, startColumn, PART_OF_PATH)
+        maze.updatePosition(startRow, startColumn, FINAL_PATH)
     else:
         maze.updatePosition(startRow, startColumn, DEAD_END)
     return found
