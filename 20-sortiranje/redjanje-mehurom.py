@@ -1,15 +1,11 @@
-niz = [12, 5, 32, 13, 8, 9, 65, 0]
-print niz, "inicijalno"
-duzina = len(niz) - 1
+def redjajMehurom(niz):
+    menjano = True
+    while menjano:
+        menjano = False
+        for x in range(len(niz) - 1):
+            if niz[x] > niz[x+1]:
+                niz[x], niz[x+1] = niz[x+1], niz[x]
+                menjano = True
+    return niz
 
-while True:
-    menjano = False
-    for i in range(duzina):
-        naredni = i + 1
-        if niz[i] > niz[naredni]:
-            niz[i], niz[naredni] = niz[naredni], niz[i]
-            menjano = True
-    if not menjano:
-        break
-
-print niz, "sortirano"
+print(redjajMehurom([54,26,93,17,77,31,44,55,20]))
