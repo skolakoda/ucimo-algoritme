@@ -1,4 +1,4 @@
-def poredjaj(niz):
+def redjajUmetanjem(niz):
     for i in range(len(niz)):
         trenutni = niz[i]
         j = i
@@ -9,4 +9,4 @@ def poredjaj(niz):
     return niz
 
 
-print(poredjaj([54, 26, 93, 17, 77, 31, 44, 55, 20]))
+print(redjajUmetanjem([54, 26, 93, 17, 77, 31, 44, 55, 20]))
