@@ -1,22 +1,18 @@
-def quickSort(arr):
-    less = []
-    pivotList = []
-    more = []
-    if len(arr) <= 1:
-        return arr
-    else:
-        pivot = arr[0]
-        for i in arr:
-            if i < pivot:
-                less.append(i)
-            elif i > pivot:
-                more.append(i)
-            else:
-                pivotList.append(i)
-        less = quickSort(less)
-        more = quickSort(more)
-        return less + pivotList + more
+def poredjaj(niz):
+    if len(niz) <= 1: return niz
 
-a = [4, 65, 2, -31, 0, 99, 83, 782, 1]
+    manje = []
+    jednako = []
+    vece = []
+    pivot = niz[0]
+    for x in niz:
+        if x < pivot:
+            manje.append(x)
+        if x == pivot:
+            jednako.append(x)
+        if x > pivot:
+            vece.append(x)
+    return poredjaj(manje) + jednako + poredjaj(vece)
 
-print (quickSort(a))
+
+print(poredjaj([54, 26, 93, 17, 77, 31, 44, 55, 20]))

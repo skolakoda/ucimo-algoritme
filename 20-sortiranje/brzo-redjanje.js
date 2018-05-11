@@ -1,4 +1,4 @@
-const slucajniNiz = require('./utils/slucajniNiz')
+const slucajniNiz = require('../utils/slucajniNiz')
 
 function brzoRedjaj(niz) {
   if (niz.length <= 1) return niz

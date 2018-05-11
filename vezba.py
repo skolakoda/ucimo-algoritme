@@ -1,12 +1,7 @@
-def poredjaj(niz):
-    for i in range(len(niz)):
-        trenutni = niz[i]
-        j = i
-        while j > 0 and niz[j - 1] > trenutni:
-            niz[j] = niz[j - 1]
-            j = j - 1
-        niz[j] = trenutni
-    return niz
+def qsort(arr):
+    if len(arr) <= 1:
+        return arr
 
+    return qsort([x for x in arr[1:] if x < arr[0]]) + [arr[0]] + qsort([x for x in arr[1:] if x >= arr[0]])
 
-print(poredjaj([54, 26, 93, 17, 77, 31, 44, 55, 20]))
+print(qsort([54, 26, 93, 17, 77, 31, 44, 55, 20]))
