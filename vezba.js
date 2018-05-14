@@ -1,20 +1,14 @@
-const slucajniNiz = require('./utils/slucajniNiz')
-
-function brzoRedjaj(niz) {
-  if (niz.length <= 1) return niz
-
-  const levo = []
-  const desno = []
-  const pivot = niz.pop()
-
-  for (let i = 0; i < niz.length; i++) {
-    if (niz[i] <= pivot) {
-      levo.push(niz[i])
-    } else {
-      desno.push(niz[i])
+function insertionsort(a, n) {
+  let i
+  for (i = 1; i < n; i++) {
+    let j, tmp = a[i]
+    for (let j = i; j > 0 && a[j-1] > tmp; j--) {
+      a[j] = a[j-1]
     }
+    a[j] = tmp
   }
-  return [...brzoRedjaj(levo), pivot, ...brzoRedjaj(desno)]
+  return a
 }
 
-console.log(brzoRedjaj(slucajniNiz(20)))
+const niz = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+console.log(insertionsort(niz, niz.length))
