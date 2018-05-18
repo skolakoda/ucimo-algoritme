@@ -4,4 +4,4 @@ def pomnozi(x, y):
         return 2 * pomnozi(x / 2, y)
     return y + 2 * pomnozi((x - 1) / 2, y)
 
-print (pomnozi(4, 7))
+print (pomnozi(12, 14))
