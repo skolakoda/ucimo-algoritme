@@ -1,15 +1,13 @@
-function jelUpareno(znaci) {
-  stog = []
-  for (znak of znaci) {
-    if (znak == '(')
-      stog.push(znak)
-    if (znak == ')') {
-      if (!stog.length) return false
-      stog.pop()
-    }
-  }
-  return !stog.length
-}
+const matrica = [
+  [1, 2, 12, 4],
+  [3, 9, 11, 8],
+  [7, 10, 2, 5],
+  [1, 6, 14, 3]
+]
+const n = matrica.length
+let suma = 0
 
-console.log(jelUpareno('(((a + b))(b + a)(()))'))
-console.log(jelUpareno('())('))
+for(let i = 0; i < n; i++)
+  suma += matrica[i][n - i - 1]
+
+console.log('Aritmetička sredina sporedne dijagonale je ' + suma / n)
