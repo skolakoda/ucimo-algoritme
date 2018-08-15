@@ -1,6 +1,6 @@
 class Cvor {
   constructor(vrednost) {
-    this.data = vrednost
+    this.vrednost = vrednost
     this.levo = null
     this.desno = null
   }
@@ -17,26 +17,25 @@ class BinarnoStabloPretrage {
 
     if (!this.koren) {
       this.koren = cvor
-    } else {
-      let trenutniCvor = this.koren
-      while (trenutniCvor) {
-        if (vrednost < trenutniCvor.data) {
-          if (!trenutniCvor.levo) {
-            trenutniCvor.levo = cvor
-            break
-          } else {
-            trenutniCvor = trenutniCvor.levo
-          }
-        } else if (vrednost > trenutniCvor.data) {
-          if (!trenutniCvor.desno) {
-            trenutniCvor.desno = cvor
-            break
-          } else {
-            trenutniCvor = trenutniCvor.desno
-          }
-        } else {
-          console.log('Ignoring this value as the stablo supposed to be a tree containing UNIQUE values')
+      return
+    }
+
+    let trenutniCvor = this.koren
+
+    while (trenutniCvor) {
+      if (vrednost < trenutniCvor.vrednost) {
+        if (!trenutniCvor.levo) {
+          trenutniCvor.levo = cvor
           break
+        } else {
+          trenutniCvor = trenutniCvor.levo
+        }
+      } else {
+        if (!trenutniCvor.desno) {
+          trenutniCvor.desno = cvor
+          break
+        } else {
+          trenutniCvor = trenutniCvor.desno
         }
       }
     }
