@@ -1,8 +1,8 @@
 class Cvor {
-  constructor(val) {
-    this.data = val
-    this.left = null
-    this.right = null
+  constructor(vrednost) {
+    this.data = vrednost
+    this.levo = null
+    this.desno = null
   }
 }
 
@@ -12,27 +12,27 @@ class BinarnoStabloPretrage {
     this.koren = null
   }
 
-  insertNode(val) {
-    const cvor = new Cvor(val)
+  dodaj(vrednost) {
+    const cvor = new Cvor(vrednost)
 
     if (!this.koren) {
       this.koren = cvor
     } else {
       let trenutniCvor = this.koren
       while (trenutniCvor) {
-        if (val < trenutniCvor.data) {
-          if (!trenutniCvor.left) {
-            trenutniCvor.left = cvor
+        if (vrednost < trenutniCvor.data) {
+          if (!trenutniCvor.levo) {
+            trenutniCvor.levo = cvor
             break
           } else {
-            trenutniCvor = trenutniCvor.left
+            trenutniCvor = trenutniCvor.levo
           }
-        } else if (val > trenutniCvor.data) {
-          if (!trenutniCvor.right) {
-            trenutniCvor.right = cvor
+        } else if (vrednost > trenutniCvor.data) {
+          if (!trenutniCvor.desno) {
+            trenutniCvor.desno = cvor
             break
           } else {
-            trenutniCvor = trenutniCvor.right
+            trenutniCvor = trenutniCvor.desno
           }
         } else {
           console.log('Ignoring this value as the stablo supposed to be a tree containing UNIQUE values')
@@ -45,14 +45,14 @@ class BinarnoStabloPretrage {
 
 const stablo = new BinarnoStabloPretrage()
 
-stablo.insertNode(8)
-stablo.insertNode(3)
-stablo.insertNode(10)
-stablo.insertNode(1)
-stablo.insertNode(6)
-stablo.insertNode(14)
-stablo.insertNode(4)
-stablo.insertNode(7)
-stablo.insertNode(13)
+stablo.dodaj(8)
+stablo.dodaj(3)
+stablo.dodaj(10)
+stablo.dodaj(1)
+stablo.dodaj(6)
+stablo.dodaj(14)
+stablo.dodaj(4)
+stablo.dodaj(7)
+stablo.dodaj(13)
 
 console.log(stablo)
