@@ -6,8 +6,7 @@ class Cvor {
   }
 }
 
-class BinarnoStabloPretrage {
-
+class Stablo {
   constructor() {
     this.koren = null
   }
@@ -21,7 +20,6 @@ class BinarnoStabloPretrage {
     }
 
     let trenutniCvor = this.koren
-
     while (trenutniCvor) {
       if (vrednost < trenutniCvor.vrednost) {
         if (!trenutniCvor.levo) {
@@ -42,7 +40,7 @@ class BinarnoStabloPretrage {
   }
 }
 
-const stablo = new BinarnoStabloPretrage()
+const stablo = new Stablo()
 
 stablo.dodaj(8)
 stablo.dodaj(3)
