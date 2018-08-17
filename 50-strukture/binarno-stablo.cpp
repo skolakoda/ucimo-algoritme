@@ -1,21 +1,21 @@
 #include<stdio.h>
 #include<stdlib.h>
   
-struct cvor
+struct Cvor
 {
     int podatak;
-    struct cvor *levi, *desni;
+    struct Cvor *levi, *desni;
 };
   
-struct cvor *noviCvor(int item)
+Cvor *noviCvor(int item)
 {
-    struct cvor *novi =  (struct cvor *)malloc(sizeof(struct cvor));
+    Cvor *novi =  (Cvor *)malloc(sizeof(Cvor));
     novi->podatak = item;
     novi->levi = novi->desni = NULL;
     return novi;
 }
 
-void ispisi(struct cvor *koren)
+void ispisi(Cvor *koren)
 {
     if (koren != NULL)
     {
@@ -25,31 +25,31 @@ void ispisi(struct cvor *koren)
     }
 }
 
-struct cvor* ubaciCvor(struct cvor* cvor, int podatak)
+Cvor* ubaciCvor(Cvor* koren, int podatak)
 {
-    /* ako je stablo prazno, vraca novi cvor */
-    if (cvor == NULL) return noviCvor(podatak);
+    /* ako je stablo prazno, vraca novi koren */
+    if (koren == NULL) return noviCvor(podatak);
  
     /* inace, rekurise niz stablo */
-    if (podatak < cvor->podatak)
-        cvor->levi  = ubaciCvor(cvor->levi, podatak);
-    else if (podatak > cvor->podatak)
-        cvor->desni = ubaciCvor(cvor->desni, podatak);   
+    if (podatak < koren->podatak)
+        koren->levi  = ubaciCvor(koren->levi, podatak);
+    else if (podatak > koren->podatak)
+        koren->desni = ubaciCvor(koren->desni, podatak);   
  
-    /* vraca (nepromenjen) cvor pokazivac */
-    return cvor;
+    /* vraca (nepromenjen) koren pokazivac */
+    return koren;
 }
- 
+
 
 int main()
 {
-    /* pravimo sledece stablo
+    /* pravimo sledece stablo:
               50
            /     \
           30      70
          /  \    /  \
        20   40  60   80 */
-    struct cvor *koren = NULL;
+    Cvor *koren = NULL;
     koren = ubaciCvor(koren, 50);
     ubaciCvor(koren, 30);
     ubaciCvor(koren, 20);
