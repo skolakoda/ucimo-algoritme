@@ -11,29 +11,29 @@ class Stablo {
     this.koren = new Cvor(vrednost)
   }
 
-  dodaj(vrednost, koren = this.koren) {
-    if (vrednost === koren.vrednost) return
-    const strana = vrednost > koren.vrednost ? 'desno' : 'levo'
-    if (!koren[strana]) koren[strana] = new Cvor(vrednost)
-    else this.dodaj(vrednost, koren[strana])
+  dodaj(vrednost, cvor = this.koren) {
+    if (vrednost === cvor.vrednost) return
+    const strana = vrednost > cvor.vrednost ? 'desno' : 'levo'
+    if (!cvor[strana]) cvor[strana] = new Cvor(vrednost)
+    else this.dodaj(vrednost, cvor[strana])
   }
 
-  ispisi(koren = this.koren) {
-    if (!koren) return
-    this.ispisi(koren.levo)
-    console.log(koren.vrednost)
-    this.ispisi(koren.desno)
+  ispisi(cvor = this.koren) {
+    if (!cvor) return
+    this.ispisi(cvor.levo)
+    console.log(cvor.vrednost)
+    this.ispisi(cvor.desno)
   }
 
-  ispisiNeredjano(koren = this.koren) {
-    if (!koren) return
-    console.log(koren.vrednost)
-    this.ispisi(koren.levo)
-    this.ispisi(koren.desno)
+  ispisiNeredjano(cvor = this.koren) {
+    if (!cvor) return
+    console.log(cvor.vrednost)
+    this.ispisi(cvor.levo)
+    this.ispisi(cvor.desno)
   }
 
-  ispisiPoSirini(koren = this.koren) {
-    const red = koren ? [koren] : []
+  ispisiPoSirini(cvor = this.koren) {
+    const red = cvor ? [cvor] : []
     while (red.length) {
       const cvor = red.shift()
       console.log(cvor.vrednost)
@@ -42,8 +42,8 @@ class Stablo {
     }
   }
 
-  ispisiPoDubini(koren = this.koren) {
-    const stog = koren ? [koren] : []
+  ispisiPoDubini(cvor = this.koren) {
+    const stog = cvor ? [cvor] : []
     while (stog.length) {
       const cvor = stog.pop()
       console.log(cvor.vrednost)
@@ -52,11 +52,11 @@ class Stablo {
     }
   }
 
-  ispisiPoDubiniRekurzivno(koren = this.koren) {
-    if (!koren) return
-    console.log(koren.vrednost)
-    this.ispisi(koren.desno)
-    this.ispisi(koren.levo)
+  ispisiPoDubiniRekurzivno(cvor = this.koren) {
+    if (!cvor) return
+    console.log(cvor.vrednost)
+    this.ispisi(cvor.desno)
+    this.ispisi(cvor.levo)
   }
 }
 
