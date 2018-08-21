@@ -1,7 +1,7 @@
 class Cvor:
     def __init__(self, val):
-        self.l_dete = None
-        self.d_dete = None
+        self.levo = None
+        self.desno = None
         self.data = val
 
 
@@ -10,31 +10,31 @@ def dodaj(koren, cvor):
         koren = cvor
     else:
         if koren.data > cvor.data:
-            if koren.l_dete is None:
-                koren.l_dete = cvor
+            if koren.levo is None:
+                koren.levo = cvor
             else:
-                dodaj(koren.l_dete, cvor)
+                dodaj(koren.levo, cvor)
         else:
-            if koren.d_dete is None:
-                koren.d_dete = cvor
+            if koren.desno is None:
+                koren.desno = cvor
             else:
-                dodaj(koren.d_dete, cvor)
+                dodaj(koren.desno, cvor)
 
 
 def stampaj_poredjano(koren):
     if not koren:
         return
-    stampaj_poredjano(koren.l_dete)
+    stampaj_poredjano(koren.levo)
     print koren.data
-    stampaj_poredjano(koren.d_dete)
+    stampaj_poredjano(koren.desno)
 
 
 def stampaj_neredjano(koren):
     if not koren:
         return
     print koren.data
-    stampaj_neredjano(koren.l_dete)
-    stampaj_neredjano(koren.d_dete)
+    stampaj_neredjano(koren.levo)
+    stampaj_neredjano(koren.desno)
 
 
 stablo = Cvor(3)
