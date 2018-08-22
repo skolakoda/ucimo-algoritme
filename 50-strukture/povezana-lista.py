@@ -1,7 +1,8 @@
 # http://interactivepython.org/runestone/static/pythonds/BasicDS/ImplementinganUnorderedListLinkedLists.html
 
+
 class Node:
-    def __init__(self,initdata):
+    def __init__(self, initdata):
         self.data = initdata
         self.next = None
 
@@ -11,10 +12,10 @@ class Node:
     def getNext(self):
         return self.next
 
-    def setData(self,newdata):
+    def setData(self, newdata):
         self.data = newdata
 
-    def setNext(self,newnext):
+    def setNext(self, newnext):
         self.next = newnext
 
 
@@ -22,7 +23,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    def add(self,item):
+    def add(self, item):
         temp = Node(item)
         temp.setNext(self.head)
         self.head = temp
@@ -35,7 +36,7 @@ class LinkedList:
             current = current.getNext()
         return count
 
-    def remove(self,item):
+    def remove(self, item):
         current = self.head
         previous = None
         while current.getData() != item:

@@ -1,3 +1,5 @@
+const broj = process.argv[2] ? Number(process.argv[2]) : 35
+
 function jelProst(broj) {
   if (broj < 2) return false
   if (broj == 2) return true
@@ -7,4 +9,4 @@ function jelProst(broj) {
   return true
 }
 
-console.log(jelProst(35))
+console.log(jelProst(broj))
