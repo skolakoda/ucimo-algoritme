@@ -1,5 +1,8 @@
-def stepenuj(x, n):
-  if n == 0: return 1
-  return x * stepenuj(x, n-1)
+def stepenuj(broj, stepen):
+  if (stepen == 1):
+    return broj
+  return broj * stepenuj(broj, stepen - 1)
 
-print(stepenuj(2, 8))
+
+print(stepenuj(2, 3))
+print(stepenuj(10, 3))
