@@ -4,10 +4,9 @@ const slucajniNiz = require('../utils/slucajniNiz')
 function redjajUmetanjem(niz) {
   for (let i = 1; i < niz.length; i++) {
     let j
-    const trenutni = niz[i]
-    for (j = i; j > 0 && niz[j-1] > trenutni; j--)
+    for (j = i; j > 0 && niz[j-1] > niz[i]; j--)
       niz[j] = niz[j-1]
-    niz[j] = trenutni
+    niz[j] = niz[i]
   }
   return niz
 }
