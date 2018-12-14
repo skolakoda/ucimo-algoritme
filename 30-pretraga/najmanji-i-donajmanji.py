@@ -13,7 +13,7 @@ def print2Smallest(arr):
             first = arr[i]
 
         elif (arr[i] < second and arr[i] != first):
-            second = arr[i];
+            second = arr[i]
 
     if (second == sys.maxint):
         print "Nema donajmanjeg"

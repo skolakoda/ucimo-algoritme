@@ -1,4 +1,5 @@
 # https://www.hackerrank.com/challenges/ctci-ransom-note/
+# jel prvi tekst sadrži reči iz drugog
 
 def checkMagazine(magazine, note):
     magazine = magazine.split()

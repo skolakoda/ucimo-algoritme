@@ -1,4 +1,5 @@
 # http://interactivepython.org/runestone/static/pythonds/Recursion/pythondsConvertinganIntegertoaStringinAnyBase.html
+# konverzija u drugi brojcani sistem
 
 osnova = 2
 znaci = "0123456789ABCDEF"
