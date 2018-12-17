@@ -8,7 +8,6 @@
   },
   "rules": {
       "semi": ["warn", "never"],
-      "quotes": ["error", "single"],
       "no-unused-vars": "error",
       "no-redeclare": "error",
       "no-use-before-define": "error",
