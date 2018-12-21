@@ -9,9 +9,8 @@ const ceilSize = 8
 const gridSize = ceilSize * ceilSize // 64
 const cWidth = ceilSize * gridSize // 512
 const cHeight = ceilSize * gridSize // 512
-let cells = []
 
-function draw() {
+function draw(cells) {
   canvas.clearRect(0, 0, cWidth, cHeight)
   cells.forEach((row, x) => {
     row.forEach((cell, y) => {
@@ -22,7 +21,7 @@ function draw() {
   })
 }
 
-function countNeighbours(x, y) {
+function countNeighbours(x, y, cells) {
   let neighbours = 0
   const exists = (x, y) => cells[x] && cells[x][y]
   for (let h = -1; h <= +1; h++) {
@@ -34,23 +33,28 @@ function countNeighbours(x, y) {
   return neighbours
 }
 
-function update() {
-  cells = cells.map((row, x) => row.map((cell, y) => {
-    const neighbours = countNeighbours(x, y)
+function nextGeneration(cells) {
+  return cells.map((row, x) => row.map((cell, y) => {
+    const neighbours = countNeighbours(x, y, cells)
     return neighbours === 3 || (cell && neighbours === 2)
   }))
-  draw()
-  setTimeout(update, 70)
+}
+
+function update(cells) {
+  const newCells = nextGeneration(cells)
+  draw(newCells)
+  setTimeout(() => update(newCells), 70)
 }
 
 function init() {
+  const cells = []
   for (let i = 0; i < gridSize; i++) {
     cells[i] = []
     for (let j = 0; j < gridSize; j++) {
       cells[i][j] = Math.random() >= 0.8
     }
   }
-  update()
+  update(cells)
 }
 
 init()
