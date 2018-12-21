@@ -40,16 +40,10 @@ function countNeighbours(x, y) {
 }
 
 function update() {
-  const newCells = []
-  cells.forEach((row, x) => {
-    newCells[x] = []
-    row.forEach((cell, y) => {
-      const neighbours = countNeighbours(x, y)
-      const alive = neighbours === 3 || (cell && neighbours === 2) ? 1 : 0
-      newCells[x][y] = alive
-    })
-  })
-  cells = newCells
+  cells = cells.map((row, x) => row.map((cell, y) => {
+    const neighbours = countNeighbours(x, y)
+    return neighbours === 3 || (cell && neighbours === 2)
+  }))
   draw()
   setTimeout(update, 70)
 }
@@ -58,7 +52,7 @@ function init() {
   for (let i = 0; i < gridSize; i++) {
     cells[i] = []
     for (let j = 0; j < gridSize; j++) {
-      cells[i][j] = Math.round(Math.random())
+      cells[i][j] = Math.random() >= 0.8
     }
   }
   update()
