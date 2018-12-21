@@ -1,6 +1,5 @@
 /**
- * Conway's Game of Life.
- * @author http://ankr.dk
+ * Conway's Game of Life
  * http://jsfiddle.net/ankr/tgjLA/
  */
 const canvas = document.getElementById('c').getContext('2d')
@@ -26,16 +25,12 @@ function draw() {
 function countNeighbours(x, y) {
   let neighbours = 0
   const exists = (x, y) => cells[x] && cells[x][y]
-
-  if (exists(x - 1, y - 1)) neighbours++
-  if (exists(x, y - 1)) neighbours++
-  if (exists(x + 1, y - 1)) neighbours++
-  if (exists(x - 1, y)) neighbours++
-  if (exists(x + 1, y)) neighbours++
-  if (exists(x - 1, y + 1)) neighbours++
-  if (exists(x, y + 1)) neighbours++
-  if (exists(x + 1, y + 1)) neighbours++
-
+  for (let h = -1; h <= +1; h++) {
+    for (let v = -1; v <= +1; v++) {
+      if (h == 0 && v == 0) continue
+      if (exists(x + h, y + v)) neighbours++
+    }
+  }
   return neighbours
 }
 
