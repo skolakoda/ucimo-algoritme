@@ -1,4 +1,4 @@
-// vrati prvi unikatni znak iz strune ili _
+// vrati prvi unikatni znak ili _
 
 function prviUnikatniZnak(s) {
   for (let i = 0; i < s.length; i++) {

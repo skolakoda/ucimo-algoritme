@@ -1,0 +1,1 @@
+jelPalindrom w = w == reverse w
