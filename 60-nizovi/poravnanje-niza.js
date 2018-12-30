@@ -1,8 +1,6 @@
-const flatten = (...args) => {
-  return args.reduce((arr, curr) =>
-    arr.concat(Array.isArray(curr) ? flatten(...curr) : curr)
-  , [])
+function poravnaj(niz) {
+  const nadovezan = [].concat(...niz)
+  return nadovezan.some(Array.isArray) ? poravnaj(nadovezan) : nadovezan
 }
 
-console.log(flatten(1, [2, 3], 4, 5, [6, [7]])) // [1, 2, 3, 4, 5, 6, 7]
-console.log(flatten('a', ['b', 2], 3, null, [[4], ['c']])) // ['a', 'b', 2, 3, null, 4, 'c']
+console.log(poravnaj([1, [2, 3, 4], [5, [[6]]]]))
