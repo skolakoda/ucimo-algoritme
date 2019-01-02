@@ -1,3 +1,5 @@
+// https://www.hackerrank.com/challenges/printing-pattern-2/
+
 #include <stdio.h>
 
 int main() 
