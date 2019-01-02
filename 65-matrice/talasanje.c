@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int min(a, b) {
+int min(int a, int b) {
     return a < b ? a : b;
 }
 
