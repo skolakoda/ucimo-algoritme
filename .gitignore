@@ -1,4 +1,6 @@
 *.pyc
 *.out
 *.class
+vezbe
 vezba.*
+.DS_Store
